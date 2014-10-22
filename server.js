@@ -36,8 +36,7 @@ console.log('Express server listening on port %d in %s mode', config.port, app.g
 
 //error logging with raven
 var raven = require('raven');
-app.use(raven.middleware.express('https://db4f99d9238948be9d1e2fa85b34084a:6d031ec71a6a41c3bdea826ac9e55db9@app.getsentry.com/22998'));
-
+app.error(raven.middleware.express('http://0a205057c4cd4538a86d394a46887736:a1dc8654699f4843abe1099c48bdb895@errors.allmende.io/3'));
 
 
 // Expose app
